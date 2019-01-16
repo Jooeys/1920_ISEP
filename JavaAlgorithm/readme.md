@@ -152,4 +152,122 @@ public class MyQuickSort {
     }
 }
 ```
+## Program3: Implement merge sort in java.
 
+Merge sort is a divide and conquer algorithm.
+
+Steps to implement Merge Sort:
+
+1) Divide the unsorted array into n partitions, each partition contains 1 element. Here the one element is considered as sorted.
+2) Repeatedly merge partitioned units to produce new sublists until there is only 1 sublist remaining. This will be the sorted list at the end.
+![image](http://www.java2novice.com/images/merge_sort.png)
+Merge sort is a fast, stable sorting routine with guaranteed O(n*log(n)) efficiency. When sorting arrays, merge sort requires additional scratch space proportional to the size of the input array. Merge sort is relatively simple to code and offers performance typically only slightly below that of quicksort.
+
+```
+public class MyMergeSort {
+     
+    private int[] array;
+    private int[] tempMergArr;
+    private int length;
+ 
+    public static void main(String a[]){
+         
+        int[] inputArr = {45,23,11,89,77,98,4,28,65,43};
+        MyMergeSort mms = new MyMergeSort();
+        mms.sort(inputArr);
+        for(int i:inputArr){
+            System.out.print(i);
+            System.out.print(" ");
+        }
+    }
+     
+    public void sort(int inputArr[]) {
+        this.array = inputArr;
+        this.length = inputArr.length;
+        this.tempMergArr = new int[length];
+        doMergeSort(0, length - 1);
+    }
+ 
+    private void doMergeSort(int lowerIndex, int higherIndex) {
+         
+        if (lowerIndex < higherIndex) {
+            int middle = lowerIndex + (higherIndex - lowerIndex) / 2;
+            // Below step sorts the left side of the array
+            doMergeSort(lowerIndex, middle);
+            // Below step sorts the right side of the array
+            doMergeSort(middle + 1, higherIndex);
+            // Now merge both sides
+            mergeParts(lowerIndex, middle, higherIndex);
+        }
+    }
+ 
+    private void mergeParts(int lowerIndex, int middle, int higherIndex) {
+ 
+        for (int i = lowerIndex; i <= higherIndex; i++) {
+            tempMergArr[i] = array[i];
+        }
+        int i = lowerIndex;
+        int j = middle + 1;
+        int k = lowerIndex;
+        while (i <= middle && j <= higherIndex) {
+            if (tempMergArr[i] <= tempMergArr[j]) {
+                array[k] = tempMergArr[i];
+                i++;
+            } else {
+                array[k] = tempMergArr[j];
+                j++;
+            }
+            k++;
+        }
+        while (i <= middle) {
+            array[k] = tempMergArr[i];
+            k++;
+            i++;
+        }
+ 
+    }
+    
+```
+```
+Output:
+4 11 23 28 43 45 65 77 89 98 
+```
+## Program4: Implement selection sort in java.
+
+The selection sort is a combination of searching and sorting. During each pass, the unsorted element with the smallest (or largest) value is moved to its proper position in the array. The number of times the sort passes through the array is one less than the number of items in the array. In the selection sort, the inner loop finds the next smallest (or largest) value and the outer loop places that value into its proper location.
+![image](http://www.java2novice.com/images/selectionsort.jpg)
+Selection sort is not difficult to analyze compared to other sorting algorithms since none of the loops depend on the data in the array. Selecting the lowest element requires scanning all n elements (this takesn − 1 comparisons) and then swapping it into the first position. Finding the next lowest element requires scanning the remaining n − 1 elements and so on, for (n − 1) + (n − 2) + ... + 2 + 1 = n(n − 1) / 2 ∈ Θ(n2) comparisons. Each of these scans requires one swap for n − 1 elements.
+```
+public class MySelectionSort {
+ 
+    public static int[] doSelectionSort(int[] arr){
+         
+        for (int i = 0; i < arr.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++)
+                if (arr[j] < arr[index]) 
+                    index = j;
+      
+            int smallerNumber = arr[index];  
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
+        }
+        return arr;
+    }
+     
+    public static void main(String a[]){
+         
+        int[] arr1 = {10,34,2,56,7,67,88,42};
+        int[] arr2 = doSelectionSort(arr1);
+        for(int i:arr2){
+            System.out.print(i);
+            System.out.print(", ");
+        }
+    }
+}
+```
+```
+Output:
+2, 7, 10, 34, 42, 56, 67, 88, 
+```
