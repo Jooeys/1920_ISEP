@@ -1,0 +1,31 @@
+.form{
+    text-align: center;
+    float: right;
+    margin-right: 38%;
+    border: solid 1px red;
+}
+fieldset {
+    padding:10px;
+    margin:10px;
+    height:80px;
+    width:300px;
+    color:#333;
+    border:red solid 1px;
+    text-align:center;
+}
+legend {
+    color:red;
+    font-weight:800;
+.input-group {
+    background-color:#FFF3F3;
+    float:left;
+}
+input:focus {
+    background-color: white;
+
+}
+.welcome{
+    text-align: center;
+    text-decoration-color: crimson;
+}
+
