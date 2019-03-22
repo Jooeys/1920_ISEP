@@ -19,3 +19,8 @@ Daily Practice in 2019
 - https://zhuanlan.zhihu.com/p/30956396
 巴黎晚上去哪儿浪，让python帮忙选
 - https://zhuanlan.zhihu.com/p/31162535
+
+
+https://d3js.org/
+https://bl.ocks.org/
+neo4j.com,
