@@ -1,16 +1,16 @@
-# 2019_Daily
-Daily Practice in 2019
+#### To organise training projects
+- II.3502 - Architectures et Programmation Distribuées
+- IP.3510 - Projets de fin de parcours / End-of-Track project
+- II.3523 - Formal Approaches, Programming Languages and Compilers 
+- II.3510 – Mobile Application Development for Android
+- II.3506 -Technologies Web Advanced
+- IL.3505 - LANGUES, CULT&HUM.
 
+
+#### Lien Utile
 - http://weinan.io/2018/05/04/spark.html
-
-### 2013-2017年巴黎铁路网客流量统计
-### 玩些什么呢？ 资料搜集
-巴黎的地铁/铁路线路到底有多不靠谱？让我们用数据说话 #
-- https://zhuanlan.zhihu.com/p/30956396
-巴黎晚上去哪儿浪，让python帮忙选
-- https://zhuanlan.zhihu.com/p/31162535
-
-
-https://d3js.org/
-https://bl.ocks.org/
-neo4j.com,
+- https://d3js.org/
+- https://bl.ocks.org/
+- neo4j.com
+- https://developer.android.com/docs
+- https://github.com/jaywcjlove/linux-command
