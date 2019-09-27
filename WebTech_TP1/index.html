@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="./index.js"></script>
+<script src="./axios.min.js"></script>
+<link href="./index.css" rel="stylesheet" type="text/css"/>
+<title></title>
+</head>
+<body>
+    <h2 style="text-align: center;">TP1-Created by Junyi ZHONG</h2>
+    <div id="ex">
+
+    <div class="ex1">
+        <h3 id="ex1">Exercise1: JS output,I used alert box to display "Hello World!"</h3>
+        <button onclick="DisplayInfo()">Display</button>
+    </div>
+
+    <div class="ex2">
+        <h3>Exercise2: Hide and Seek</h3>
+        <button id="b1" onclick="Hide_and_Seek()">Hide</button><button id="b2" onclick="Hide_and_Seek()">Seek</button>
+    </div>
+    
+    <div class="ex3">
+        <h3>Exercise3: Number Check: </h3>
+           <P>- try to type symbols:"@" --> This is not a number</P>
+           <p>- try to type numbers: "1" --> This is a prime number </p>
+        <label >Number</label>
+        <input id="PrimeNumber"><br><br>
+        <button onclick="CheckPrime()">Check Number</button></div>
+    
+    <div class="ex4">
+        <h3>Exercise4: Check name and age.if your full name is empty or ‘John DOE’ (case insensitive), or if your age is undefined or below 0, the API will return an error. Otherwise, it will return OK with a sentence you need to display.</h3>
+        <form name="myform" method="POST">
+            <label >Name</label>
+            <input id="name" name="name" type="text" placeholder="FullName" />
+            <label>Age</label>
+            <input id="age" name="age" type="text" placeholder="Age"/><br><br>
+            <button name="submit" onclick="validation()">submit</button>
+        </form>     
+    </div>
+    </div>
+</body>
+</html>
